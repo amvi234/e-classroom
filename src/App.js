@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
 
+import React from 'react'
+// import { useState } from "react"
+import Student from './pages/Student'
+import LoginPortal from './pages/LoginPortal'
+import Nav from './pages/Nav'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Footer from'./pages/Footer'
+import Logout from './pages/Logout'
+import Assignment from './pages/Assignments'
+import Subjects from './pages/Subjects'
+import Dashboard from './pages/Dashboard'
+import Register from './pages/Register'
+import PrivateComponent from './pages/PrivateComponent'
+import './App.css'
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+
+
+  return (
+    <div className="App" >
+      <BrowserRouter>
+      <Nav/>
+      
+      
+      
+        <Routes>
+
+          {/* <Route element ={<PrivateComponent/>}> */}
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/student" element={<Student />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/Subjects" element={<Subjects/>} />
+          <Route path="/To-do" element={<Assignment/>} />
+          <Route path="/Logout" element={<Logout/> } />
+          {/* </Route> */}
+          {/* <Route path="/login" element={<LoginPortal />} /> */}
+        </Routes>
+      </BrowserRouter>
+      
+      <Footer/>
+    </div>
+
+
+  )
+}
+export default App
