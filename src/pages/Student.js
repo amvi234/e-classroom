@@ -25,7 +25,7 @@ function Student() {
   //   console.warn("result",result)
   // }
   return (
-    <div className="col-sm-6 offset-sm-3" align="CENTER">
+    <div className="col-sm-6 offset-sm-3" >
       <h1>ATTENDANCE MARKING PORTAL</h1>
       <input type="text" value={Name} onChange={(e) => setName(e.target.value)} className="form-control" placeholder="Name" />
       <br />

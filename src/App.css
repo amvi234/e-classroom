@@ -2,15 +2,24 @@
    display: inline-block;
   
 }
+.App{
+  background-image: url("https://manycam.com/blog/wp-content/uploads/2021/02/25-02-blog-prepare-for-distance-learning.png");
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center;
+}
 .normalBtn{
-  background-color:#61dafb;
+  background-color:#6170fb;
 }
 .btn-primary{
   background-color:#61dafb;
 }
+
 .nav-ui li a{
     
-    color: red;
+    color: rgb(255, 196, 0);
     text-decoration: none;
     padding: 20px;
 
@@ -25,27 +34,38 @@
 .nav-ui {
   padding: 30px;
   margin: 0;
-  background-color: steelblue;
-  display: flex;
+  background-color: rgb(0, 128, 122);
+  /* display: flex; */
 }
-.register, .product{
-  margin-left: 30%;
-}
+
 .appButton {
   margin: 20px;
   width: 150px;
+  
   padding: 10px;
-  background-color: skyblue;
+  background-color: rgb(135, 175, 235);
   border: solid 1px;
   cursor: pointer;
 }
+.nav-right{
+  float:right;
+  
+}
+.logo {
+  width:  75px;
+  height: 75px;
+  /* border-radius: 50%; */
+  float: left;
+  margin-top: 3px;
+  margin-left: 10px;
+}
 .footer{
-  background-color: steelblue;
+  background-color:  rgb(0, 128, 122);
   position: absolute;
   bottom: 0;
   text-align: center;
   width: 100%;
-  color: red;
+  color: rgb(255, 196, 0);
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
