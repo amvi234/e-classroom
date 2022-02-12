@@ -1,42 +1,40 @@
+import React from 'react';
 
-import { useState } from "react"
-import React from 'react'
-import {useNavigate} from 'react-router-dom'
-function Student() {
-  const [Name, setName] = useState("")
-  const [USN, setUSN] = useState("")
-  const [email, setEmail] = useState("")
-  const [Phno, setphno] = useState("")
-  const navigate = useNavigate();
-  // const collectData = async  ()=> {
-
-  //   console.warn(Name, USN, email, Phno)
-
-
-  //   let result = await fetch("http://localhost:3000/Student",{
-  //     method:'POST',
-  //     body:JSON.stringify(item),
-  //     headers:{
-  //       "Content-Type":'application/json',
-  //       "Accept":'application/json'
-  //     }
-  //   })
-  //   result = await result.json()
-  //   console.warn("result",result)
-  // }
-  return (
-    <div className="col-sm-6 offset-sm-3" >
-      <h1>ATTENDANCE MARKING PORTAL</h1>
-      <input type="text" value={Name} onChange={(e) => setName(e.target.value)} className="form-control" placeholder="Name" />
-      <br />
-      <input type="text" value={USN} onChange={(e) => setUSN(e.target.value)} className="form-control" placeholder="USN" />
-      <br />
-      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="form-control" placeholder="Email" />
-      <br />
-      <input type="number" value={Phno} onChange={(e) => setphno(e.target.value)} className="form-control" placeholder="Phone no" />
-      <br />
-      <button  className="btn-primary" >Submit</button>
-    </div >
-  )
+const Student = () => {
+    const [name, setName] = React.useState('');
+    const [usn, setusn] = React.useState('');
+    const [sem, setsem] = React.useState('');
+    const [section, setsection] = React.useState('');
+    const addstudent = async () => {
+        console.warn(name, usn, sem, section);
+        let result = await fetch("http://localhost:3000/add-student",{
+          method:'post',
+          body:JSON.stringify({name, usn, sem, section}),
+          headers: {
+            'Content-Type': 'application/json'
+        }
+        });
+        result = await result.json();
+        console.warn(result)
+    }
+    return (
+        <div className='student'>
+            <h1>Add Your Attendance</h1>
+            <input type="text" placeholder='Enter name' className='inputBox'
+                value={name} onChange={(e) => { setName(e.target.value) }}
+            />
+            <input type="text" placeholder='Enter usn' className='inputBox'
+                value={usn} onChange={(e) => { setusn(e.target.value) }}
+            />
+            <input type="text" placeholder='Enter semester' className='inputBox'
+                value={sem} onChange={(e) => { setsem(e.target.value) }}
+            />
+            <input type="text" placeholder='Enter section' className='inputBox'
+                value={section} onChange={(e) => { setsection(e.target.value) }}
+            />
+            <button onClick={addstudent} className='appButton'>Save Attendance</button>
+        </div>
+    )
 }
-export default Student
+
+export default Student;
