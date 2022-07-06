@@ -9,7 +9,7 @@ const Login=()=>{
     useEffect(() => {
         const auth = localStorage.getItem('user');
         if (auth) {
-            navigate("/dashboard")
+            navigate("/Home")
         }
     }, [])
 
@@ -23,16 +23,17 @@ const Login=()=>{
         });
         result = await result.json();
         console.warn(result)
-        if (result.name) {
-            localStorage.setItem('user', JSON.stringify(result));
-            navigate("/dashboard")
+        if (result.auth) {
+            localStorage.setItem('user', JSON.stringify(result.user));
+            localStorage.setItem('token', JSON.stringify(result.auth));
+            navigate("/Dashboard")
         } else {
             alert("Please enter correct details")
         }
     }
     
     return(
-        <div className='login'>
+        <div className='login' align='center'>
         <h1>Login</h1>
         <input type="text" className="inputBox" placeholder='Enter Email'
             onChange={(e) => setEmail(e.target.value)} value={email} />

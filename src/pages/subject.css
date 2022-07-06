@@ -1,0 +1,15 @@
+/* #img-wrapper {
+    display: flex;
+    width: 1500;
+    height: 1000;
+    flex-wrap: wrap;
+   } */
+   
+   /* #img-wrapper > div {
+    flex: 0 1 33%;
+   }. */
+.subjectimg{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 10px;
+}

@@ -9,9 +9,9 @@ const Register = () => {
     useEffect(() => {
         const auth = localStorage.getItem('user');
         if (auth) {
-            navigate('/dashboard')
+            navigate('/Home')
         }
-    }, [])
+    }, []);
 
     const collectData = async () => {
         console.warn(name, email, password);
@@ -24,12 +24,14 @@ const Register = () => {
         });
         result = await result.json();
         console.warn(result);
-        localStorage.setItem("user", JSON.stringify(result))
-        navigate('/dashboard')
+        localStorage.setItem("user", JSON.stringify(result.result))
+        localStorage.setItem("token", JSON.stringify(result.auth))
+
+        navigate('/Home')
     }
 
     return (
-        <div className="register">
+        <div className="register" align='center'>
             <h1>Register</h1>
             <input className="inputBox" type="text" placeholder="Enter Name"
                 value={name} onChange={(e) => setName(e.target.value)}
