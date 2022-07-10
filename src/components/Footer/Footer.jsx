@@ -57,6 +57,7 @@ const Footer = () => {
 
             <div className="follows">
               <p className="mb-0">Follow us on social media</p>
+              <div className="stylebuttons">
               <span>
                 {" "}
                 <a href="https://www.facebook.com/profile.php?id=100009399158845">
@@ -84,6 +85,7 @@ const Footer = () => {
                   <i class="ri-github-line"></i>
                 </a>
               </span>
+              </div>
             </div>
           </Col>
 

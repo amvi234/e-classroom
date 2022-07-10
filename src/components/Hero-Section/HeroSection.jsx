@@ -19,9 +19,9 @@ const HeroSection = () => {
             </div>
           </Col>
 
-          <Col lg="6" md="6">
+          <div className="girlimg">
             <img src={heroImg} alt="" className="w-100 hero__img" />
-          </Col>
+          </div>
         </Row>
       </Container>
     </section>

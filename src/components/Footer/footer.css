@@ -4,6 +4,7 @@
 
 .follows span a {
   text-decoration: none;
+  color: red;
 }
 
 .follows span {
