@@ -1,3 +1,9 @@
+.girlimg{
+  margin-left: 600px;
+  margin-bottom: 100px;
+  /* width:160%; */
+  padding:120px;
+}
 .hero__content h2 {
   font-weight: 600;
   line-height: 55px;
@@ -21,7 +27,4 @@
   border-radius: 50px;
   margin-top: 20px;
 }
-.girlimg{
-  auto:70px;
 
-}

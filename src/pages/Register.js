@@ -33,16 +33,17 @@ const Register = () => {
     return (
         <div className="register" align='center'>
             <h1>Register</h1>
-            <input className="inputBox" type="text" placeholder="Enter Name"
+            <input className="inputtab" type="text" placeholder="Enter Name" padding-left={"20px"}
                 value={name} onChange={(e) => setName(e.target.value)}
             />
-            <input className="inputBox" type="text" placeholder="Enter Email"
+            <input className="inputtab" type="text" placeholder="Enter Email"
                 value={email} onChange={(e) => setEmail(e.target.value)}
             />
-            <input className="inputBox" type="password" placeholder="Enter password"
+            <input className="inputtab" type="password" placeholder="Enter password"
                 value={password} onChange={(e) => setPassword(e.target.value)}
             />
             <button onClick={collectData} className="appButton" type="button">Sign Up</button>
+            <h3>Click on Login if Already having an account </h3>
         </div>
     )
 }

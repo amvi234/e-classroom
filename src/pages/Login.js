@@ -39,6 +39,8 @@ const Login=()=>{
             onChange={(e) => setEmail(e.target.value)} value={email} />
         <input type="password" className="inputBox" placeholder='Enter Password'
             onChange={(e) => setPassword(e.target.value)} value={password} />
+                <h3>Don't have account? Click on Register to create one</h3>
+
         <button onClick={handleLogin}  className="appButton" type="button">Login</button>
     </div>
     )

@@ -3,7 +3,7 @@
   
 }
 .App{
-  background-image: url("https://www.chetu.com/img/e-learning/lms/sliderbg/learning-management-system-hero-shot.jpg");
+  background-image: url("D://amit//5thsem mp//front-end//src//assests//images//bg.jpg");
   position: fixed;
   min-width: 100%;
   min-height: 100%;
@@ -28,6 +28,21 @@
   padding: 7px;
   display: block;
   border: 1px solid skyblue;
+  width: 300px;
+  margin: 20px;
+}
+/* .inputtab{
+  padding: 7px;
+  display: block;
+  border: 1px solid skyblue;
+  width: 300px;
+  margin: 20px;
+} */
+.inputtab{
+  padding: 7px;
+  display: inline-flex;
+  border: 1px solid skyblue;
+
   width: 300px;
   margin: 20px;
 }
@@ -98,13 +113,13 @@
   margin-top: 100px;
 }
 
-.inputBox {
+/* .inputBox {
   padding: 7px;
   display: block;
   border: 1px solid skyblue;
   width: 300px;
   margin: 20px;
-}
+} */
 
 .appButton {
   margin: 20px;
