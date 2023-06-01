@@ -8,7 +8,7 @@ const Dashboard = () => {
     }, []);
 
     const getStudents = async () => {
-        let result = await fetch('http://localhost:3000/students',{
+        let result = await fetch('https://e-classroom-backend.herokuapp.com/students',{
             // headers:{
             //     authorization:JSON.parse(localStorage.getItem('token'))
             // }
@@ -19,7 +19,7 @@ const Dashboard = () => {
 
     const deleteStudent = async (id) => {
         console.warn(id)
-        let result = await fetch(`http://localhost:3000/student/${id}`, {
+        let result = await fetch(`https://e-classroom-backend.herokuapp.com/student/${id}`, {
             method: "Delete",
             // headers:{
             //     authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`

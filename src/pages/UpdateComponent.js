@@ -14,7 +14,7 @@ const UpdateStudent = () => {
 
     const getStudentDetails = async () => {
         console.warn(params)
-        let result = await fetch(`http://localhost:3000/student/${params.id}`,{
+        let result = await fetch(`https://e-classroom-backend.herokuapp.com/student/${params.id}`,{
             // headers:{
             //     authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`
             // }
@@ -27,7 +27,7 @@ const UpdateStudent = () => {
 
     const updatestudent = async () => {
         console.warn(name, usn, email)
-        let result = await fetch(`http://localhost:3000/student/${params.id}`, {
+        let result = await fetch(`https://e-classroom-backend.herokuapp.com/student/${params.id}`, {
             method: 'Put',
             body: JSON.stringify({ name, usn, email }),
             headers: {

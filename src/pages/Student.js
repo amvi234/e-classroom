@@ -21,7 +21,7 @@ const Student = () => {
        
         // console.warn(name, usn, sem, email);
         const sem = JSON.parse(localStorage.getItem('user'))._id;
-        let result = await fetch("http://localhost:3000/add-student",{
+        let result = await fetch("https://e-classroom-backend.herokuapp.com/add-student",{
           method:'post',
           body:JSON.stringify({name, usn, sem, email}),
           headers: {
